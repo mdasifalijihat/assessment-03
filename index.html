@@ -299,7 +299,7 @@
         </section>
 
         <!-- low price section -->
-        <section class="container mx-auto my-24 px-4 md:px-0">
+        <section class="container mx-auto mt-12 mb-56 px-4 md:px-0">
             <h2 class="text-2xl font-bold pt-52 md:pt-0 py-4 "> Everyday low Price </h2>
             <div class="flex flex-col md:flex-row gap-6  mx-auto">
 
@@ -337,35 +337,59 @@
         </section>
     </main>
     <!-- footer -->
-    <footer class="bg-[#ffed92]">
-        <div class="footer text-base-content p-10 container mx-auto">
-            <nav>
-                <h6 class="footer-title flex justify-center items-center gap-4"> <img src="c1-assets/logo-footer.png"
-                        alt="">
-                    <p> Browse <span class="text-orange-400">4</span> Pets </p>
-                </h6>
-                <a class="link link-hover">Discover a world of treats, toys, and <br> essentials handpicked for your
-                    furry <br>
-                    friends</a>
-
-            </nav>
-            <nav>
-                <a class="link link-hover">Find a pet</a>
-                <a class="link link-hover">Breeds</a>
-                <a class="link link-hover">Contact us</a>
-            </nav>
-            <nav>
-                <h6 class="footer-title">Social</h6>
-                <div class="grid grid-flow-col gap-4">
-                    <a><i class="fa-brands fa-facebook"></i></a>
-                    <a><i class="fa-brands fa-instagram"></i></a>
-                    <a><i class="fa-brands fa-linkedin"></i></a>
-                    <a><i class="fa-brands fa-youtube"></i></a>
-
+    <footer class="bg-[#ffed92] pt-36 pb-8 md:pt-8 ">
+        <div class="container mx-auto">
+            <!-- Get Pawsome News Card -->
+            <div class="max-w-screen-lg mx-auto bg-[#fff9f4] rounded-lg shadow-lg top-1/2 transform -translate-y-1/2 ">
+                <div class="flex flex-col md:flex-row items-center p-8">
+                    <div class="md:w-1/3 text-center md:text-left mb-6 md:mb-0">
+                        <img src="c1-assets/cute-pet-small.png" alt="Cute Pet" class="max-w-full h-auto mx-auto md:mx-0">
+                    </div>
+                    <div class="md:w-2/3 md:pl-8 text-center md:text-left">
+                        <h2 class="text-2xl font-semibold mb-4">Get Pawsome News!</h2>
+                        <p class="text-gray-700 mb-4">Exclusive training tips, tricks, product deals, and more.</p>
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <input type="email" placeholder="Enter Email..." class="input input-bordered w-full md:w-auto flex-grow" />
+                            <button class="px-8 py-3 bg-[#ffdc26] rounded-lg font-medium hover:bg-[#ffd300] transition">Subscribe</button>
+                        </div>
+                    </div>
                 </div>
-            </nav>
+            </div>
+    
+            <!-- Footer Section -->
+            <div class="">
+                <div class="grid grid-cols-1 md:grid-cols-3 ">
+                    <div class="text-left px-4">
+                        <div class="flex justify-start md:justify-start items-center mb-4">
+                            <img src="c1-assets/logo-footer.png" alt="Footer Logo" class="h-12 mr-2">
+                            <div class="text-xl font-semibold">
+                                Browse <span class="text-orange-400">4</span> Pets
+                            </div>
+                        </div>
+                        <p class="text-gray-700">Discover a world of treats, toys, and <br> essentials handpicked for your furry  <br>friends.</p>
+                    </div>
+                    <div>
+                        <ul class="px-4 pt-2 text-left">
+                            <li><a class="link link-hover text-gray-700" href="#">Find a pet</a></li>
+                            <li><a class="link link-hover text-gray-700" href="#">Breeds</a></li>
+                            <li><a class="link link-hover text-gray-700" href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-left px-4 ">
+                        <h6 class=" font-semibold mt-4 md:text-right">Follow Us</h6>
+                        <div class="grid grid-flow-col gap-4 justify-start md:justify-end">
+                            <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fa-brands fa-youtube text-2xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+    
+    
 </body>
 
 </html>
