@@ -16,6 +16,64 @@
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <!-- font -->
     <style>
+        /* nav banner */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeBounce {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        .animate-heading {
+            animation: fadeBounce 5s ease-in-out infinite;
+        }
+
+
+        .animate-button {
+            animation: slideInLeft 5s ease-out forwards;
+        }
+
+        .animate-paragraph {
+            animation: slideInRight 5s ease-out forwards;
+        }
+
+
+
+        /* browse categories */
         .adlamdisplay {
             font-family: "ADLaM Display", serif;
             font-weight: 400;
@@ -158,10 +216,12 @@
             class="grid grid-cols-1 md:grid-cols-2 justify-center items-center max-w-screen-2xl mx-auto mt-8 md:mt-24 px-4 md:px-0">
             <!-- text div -->
             <div class="space-y-6 pb-12 md:pb-0">
-                <h2 class="font-bold text-2xl md:text-5xl"> Pamper Your Pet, <br> Because They Deserve <br> the Bes</h2>
-                <p> Discover a world of treats, toys, and essentials handpicked for <br>your furry friends. Shop now and
+                <h2 class="font-bold text-2xl md:text-5xl animate-heading"> Pamper Your Pet, <br> Because They Deserve
+                    <br> the Bes</h2>
+                <p class="animate-paragraph"> Discover a world of treats, toys, and essentials handpicked for <br>your
+                    furry friends. Shop now and
                     make tails wag with joy! </p>
-                <button class="py-4 px-10 bg-[#ffdc26] rounded-xl"> Find a pet </button>
+                <button class="py-4 px-10 bg-[#ffdc26] rounded-xl animate-button"> Find a pet </button>
             </div>
             <!-- images div -->
             <div>
