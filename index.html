@@ -21,6 +21,33 @@
             font-weight: 400;
             font-style: normal;
         }
+
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .marquee {
+            display: flex;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 1.5rem;
+            animation: marqueeScroll 60s linear infinite reverse;
+        }
+
+        .marquee:hover .marquee-content {
+            animation-play-state: paused;
+        }
     </style>
 
 </head>
@@ -95,55 +122,42 @@
     <!-- main -->
     <main>
         <!-- browse by categories section -->
-        <section class="my-24 container mx-auto px-4 md:px-0">
-            <h2 class=" text-xl md:text-3xl font-bold"> Browse By Categories </h2>
-            <!-- card div -->
-            <div class="grid grid-cols-2 md:grid-cols-6 mt-12 gap-6 max-w-screen-xl mx-auto ">
-                <!-- card 1    -->
-                <div
-                    class="flex flex-col justify-center items-center w-[130px] md:w-[200px] h-[220px] md:h-[254px] bg-[#F9DF8A] rounded-md">
-                    <img class=" bg-white p-4 rounded-full" src="c1-assets/dog-cartoon.png" alt="">
-                    <h2 class="text-xl font-bold py-2 "> Dog </h2>
-                    <p> 3 items</p>
-                </div>
-                <!-- card 2    -->
-                <div
-                    class="flex flex-col justify-center items-center w-[130px] md:w-[200px] h-[220px] md:h-[254px] bg-[#F9DF8A] rounded-md">
-                    <img class=" bg-white p-4 rounded-full" src="c1-assets/fish-cartoon.png" alt="">
-                    <h2 class="text-xl font-bold py-2 "> Fish </h2>
-                    <p> 3 items</p>
-                </div>
-                <!-- card 3    -->
-                <div
-                    class="flex flex-col justify-center items-center w-[130px] md:w-[200px] h-[220px] md:h-[254px] bg-[#F9DF8A] rounded-md">
-                    <img class=" bg-white p-4 rounded-full" src="c1-assets/cat-cartoon.png" alt="">
-                    <h2 class="text-xl font-bold py-2 "> Cat </h2>
-                    <p> 3 items</p>
-                </div>
-                <!-- card 4   -->
-                <div
-                    class="flex flex-col justify-center items-center w-[130px] md:w-[200px] h-[220px] md:h-[254px] bg-[#F9DF8A] rounded-md">
-                    <img class=" bg-white p-4 rounded-full" src="c1-assets/bird-cartoon.png" alt="">
-                    <h2 class="text-xl font-bold py-2 "> Birds </h2>
-                    <p> 3 items</p>
-                </div>
-                <!-- card 5   -->
-                <div
-                    class="flex flex-col justify-center items-center w-[130px] md:w-[200px] h-[220px] md:h-[254px] bg-[#F9DF8A] rounded-md">
-                    <img class=" bg-white p-4 rounded-full" src="c1-assets/mouse-cartoon.png" alt="">
-                    <h2 class="text-xl font-bold py-2 "> Small pet </h2>
-                    <p> 3 items</p>
-                </div>
-                <!-- card 6    -->
-                <div
-                    class="flex flex-col justify-center items-center w-[130px] md:w-[200px] h-[220px] md:h-[254px] bg-[#F9DF8A] rounded-md">
-                    <img class=" bg-white p-4 rounded-full" src="c1-assets/rabbit-cartoon.png" alt="">
-                    <h2 class="text-xl font-bold py-2 "> Rabit </h2>
-                    <p> 3 items</p>
-                </div>
+        <section class="my-24 container mx-auto px-4">
+            <h2 class="text-xl md:text-3xl font-bold text-center mb-6">Browse By Categories</h2>
 
+            <div class="marquee">
+                <div class="marquee-content">
+                    <!-- Card 1 -->
+                    <div class="w-[200px] h-[254px] bg-[#F9DF8A] rounded-md flex flex-col justify-center items-center">
+                        <img class="bg-white p-4 rounded-full" src="c1-assets/dog-cartoon.png" alt="">
+                        <h2 class="text-xl font-bold py-2">Dog</h2>
+                        <p>3 items</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-[200px] h-[254px] bg-[#F9DF8A] rounded-md flex flex-col justify-center items-center">
+                        <img class="bg-white p-4 rounded-full" src="c1-assets/fish-cartoon.png" alt="">
+                        <h2 class="text-xl font-bold py-2">Fish</h2>
+                        <p>3 items</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="w-[200px] h-[254px] bg-[#F9DF8A] rounded-md flex flex-col justify-center items-center">
+                        <img class="bg-white p-4 rounded-full" src="c1-assets/cat-cartoon.png" alt="">
+                        <h2 class="text-xl font-bold py-2">Cat</h2>
+                        <p>3 items</p>
+                    </div>
+                    <!-- Repeat for smooth infinite scroll -->
+                    <div class="w-[200px] h-[254px] bg-[#F9DF8A] rounded-md flex flex-col justify-center items-center">
+                        <img class="bg-white p-4 rounded-full" src="c1-assets/dog-cartoon.png" alt="">
+                        <h2 class="text-xl font-bold py-2">Dog</h2>
+                        <p>3 items</p>
+                    </div>
+                    <div class="w-[200px] h-[254px] bg-[#F9DF8A] rounded-md flex flex-col justify-center items-center">
+                        <img class="bg-white p-4 rounded-full" src="c1-assets/fish-cartoon.png" alt="">
+                        <h2 class="text-xl font-bold py-2">Fish</h2>
+                        <p>3 items</p>
+                    </div>
+                </div>
             </div>
-
         </section>
         <!-- Trending Pet Products -->
         <section class="my-24 bg-[#fff9f4] h-[775px]">
