@@ -48,6 +48,38 @@
         .marquee:hover .marquee-content {
             animation-play-state: paused;
         }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-left {
+            animation: slideInLeft 5s ease-out forwards;
+        }
+
+        .animate-right {
+            animation: slideInRight 5s ease-out forwards;
+        }
     </style>
 
 </head>
@@ -331,7 +363,7 @@
 
                 <!-- Card 1 -->
                 <div
-                    class="w-full md:w-[850px] bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] overflow-hidden relative border rounded-lg">
+                    class="w-full md:w-[850px] bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] overflow-hidden relative border rounded-lg animate-left">
                     <div class="w-full h-auto md:h-[480px] flex flex-col sm:flex-row justify-center items-center">
                         <div class="text-center sm:text-left p-4 sm:w-1/2">
                             <p class="hidden md:block">Under Price</p>
@@ -346,7 +378,7 @@
 
                 <!-- Card 2 -->
                 <div
-                    class="w-full md:w-[600px] h-auto md:h-[480px] flex flex-col sm:flex-row bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] border rounded-lg overflow-hidden relative">
+                    class="w-full md:w-[600px] h-auto md:h-[480px] flex flex-col sm:flex-row bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] border rounded-lg overflow-hidden relative animate-right">
                     <div class="p-6 sm:w-1/2   ">
                         <h2 class="text-xl font-bold pt-4">T-Shirt for Dogs</h2>
                         <p class="text-5xl md:text-7xl font-bold text-[#FFDC26]">$7.99</p>
