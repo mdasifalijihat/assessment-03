@@ -49,6 +49,7 @@
             animation-play-state: paused;
         }
 
+        /* slider animation */
         @keyframes slideInLeft {
             from {
                 transform: translateX(-100%);
@@ -79,6 +80,23 @@
 
         .animate-right {
             animation: slideInRight 5s ease-out forwards;
+        }
+
+        /* top to bottom animation */
+        @keyframes slideInTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-top {
+            animation: slideInTop 5s ease-out forwards;
         }
     </style>
 
@@ -200,7 +218,7 @@
                     <!-- first div -->
                     <div class="w-full md:w-2/6 flex justify-center ">
                         <div
-                            class="relative w-[340px] md:w-[424px] h-[402px] bg-[#F9DF8A] space-y-3 rounded-lg px-4 pt-12">
+                            class="relative w-[340px] md:w-[424px] h-[402px] bg-[#F9DF8A] space-y-3 rounded-lg px-4 pt-12 animate-top">
                             <h2 class="text-2xl font-bold">T-Shirt For Dogs</h2>
                             <p>Discover a world of treats, toys, and essentials handpicked for your pet.</p>
                             <button class="bg-white px-10 py-3 rounded-md shadow-md hover:bg-gray-200 transition">
